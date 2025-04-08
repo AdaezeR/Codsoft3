@@ -1,0 +1,46 @@
+# Credit Card Fraud Detection Dataset
+
+## Dataset Overview
+This dataset contains credit card transactions made by European cardholders in September 2013, with 492 frauds out of 284,807 transactions (0.172% fraud rate). The data is highly imbalanced with frauds representing only a small fraction of all transactions.
+
+## Dataset Characteristics
+- **Number of Instances**: 284,807 transactions
+- **Number of Features**: 31 (28 anonymized + Time, Amount, Class)
+- **Imbalance Ratio**: 1:578 (fraud:genuine)
+
+## Feature Information
+1. **Time**: Seconds elapsed between transaction and first transaction
+2. **Amount**: Transaction amount
+3. **Class**: Target variable (1 = fraud, 0 = genuine)
+4. **V1-V28**: Principal components from PCA transformation of original features
+
+## Data Source
+Originally from Worldline and the Machine Learning Group of ULB (Université Libre de Bruxelles)
+
+## Usage
+This dataset is intended for:
+- Fraud detection model development
+- Imbalanced classification research
+- Anomaly detection studies
+
+## Preprocessing Notes
+- All features except Time and Amount are PCA-transformed
+- Original features are anonymized for confidentiality
+- Amount feature should be scaled before modeling
+
+## Suggested Modeling Approaches
+- Handle class imbalance using:
+  - SMOTE oversampling
+  - Class weighting
+  - Anomaly detection methods
+- Evaluate using metrics like:
+  - Precision-Recall AUC
+  - F1-score
+  - Confusion matrix
+
+## License
+This dataset is available under the Database Contents License (DbCL) v1.0
+
+## Citation
+Please cite the original source if using this dataset for research:
+[ULB Machine Learning Group Credit Card Fraud Dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud)
